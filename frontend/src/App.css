@@ -1,0 +1,392 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #202b3c;
+  background: #f4f6fa;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.dashboard {
+  max-width: 1440px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 48px clamp(20px, 5vw, 76px) 24px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2 {
+  font-family: 'Manrope', sans-serif;
+  letter-spacing: -0.8px;
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-size: clamp(26px, 3.2vw, 38px);
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+.subtitle {
+  margin-bottom: 0;
+  color: #778397;
+  font-size: 14px;
+}
+
+.date-control {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #68758a;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.date-control input {
+  min-width: 180px;
+  padding: 12px 14px;
+  border: 1px solid #e1e6ef;
+  border-radius: 10px;
+  outline: none;
+  background: white;
+  color: #202b3c;
+}
+
+.date-control input:focus {
+  border-color: #5369e8;
+  box-shadow: 0 0 0 3px #5369e81a;
+}
+
+.status-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 56px;
+  margin-bottom: 22px;
+  padding: 12px 16px;
+  border: 1px solid #e6eaf1;
+  border-radius: 12px;
+  background: #fff;
+  color: #66748a;
+  font-size: 12px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #24ad7a;
+  box-shadow: 0 0 0 4px #24ad7a18;
+}
+
+.status-divider {
+  color: #c2cad6;
+}
+
+.status-spacer {
+  flex: 1;
+}
+
+.refresh-button {
+  padding: 8px 13px;
+  border: 1px solid #e0e5ef;
+  border-radius: 8px;
+  background: white;
+  color: #334155;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.refresh-button:hover {
+  background: #f6f7fb;
+}
+
+.refresh-button:disabled {
+  cursor: wait;
+  opacity: 0.6;
+}
+
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.metric-card {
+  min-width: 0;
+  padding: 23px 20px;
+  border: 1px solid #e7ebf2;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0 4px 18px #23334d05;
+}
+
+.metric-label {
+  min-height: 34px;
+  margin-bottom: 15px;
+  color: #68758a;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.metric-value {
+  margin-bottom: 12px;
+  color: #202b3c;
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(22px, 2.4vw, 30px);
+  font-weight: 800;
+  letter-spacing: -1px;
+  overflow-wrap: anywhere;
+}
+
+.metric-unit {
+  color: #8490a2;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.metric-description {
+  margin-bottom: 0;
+  color: #98a1b1;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.panel {
+  padding: 28px;
+  border: 1px solid #e7ebf2;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 4px 18px #23334d05;
+}
+
+.panel-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.panel-heading .eyebrow {
+  margin-bottom: 8px;
+}
+
+h2 {
+  margin-bottom: 0;
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.date-pill {
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: #f0f2ff;
+  color: #5365d8;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.summary {
+  max-width: 850px;
+  color: #66748a;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.info-strip {
+  padding: 17px 19px;
+  border: 1px solid #e3e8ff;
+  border-left: 3px solid #6677e8;
+  border-radius: 9px;
+  background: #f8f9ff;
+}
+
+.info-strip strong {
+  display: block;
+  margin-bottom: 7px;
+  color: #3949a5;
+  font-size: 12px;
+}
+
+.info-strip p {
+  margin-bottom: 0;
+  color: #69748d;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.message,
+.error-message {
+  margin-bottom: 22px;
+  padding: 22px;
+  border: 1px solid #e7ebf2;
+  border-radius: 12px;
+  background: #fff;
+  color: #66748a;
+  line-height: 1.7;
+}
+
+.error-message {
+  border-color: #f2d5d5;
+  background: #fffafa;
+  color: #a23d3d;
+}
+
+.error-message p {
+  margin: 8px 0 0;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 34px;
+  padding-top: 18px;
+  border-top: 1px solid #e4e8ef;
+  color: #939cad;
+  font-size: 11px;
+}
+
+@media (max-width: 1000px) {
+  .metric-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .topbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 520px) {
+  .dashboard {
+    padding: 28px 16px 20px;
+  }
+
+  .metric-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .metric-card {
+    padding: 19px;
+  }
+
+  .panel {
+    padding: 20px;
+  }
+
+  .status-row {
+    flex-wrap: wrap;
+  }
+
+  .panel-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+.chart-panel {
+  margin-bottom: 22px;
+}
+
+.chart-description {
+  margin-bottom: 24px;
+  color: #7b8798;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.chart-container {
+  width: 100%;
+  height: 340px;
+}
+
+.data-panel {
+  margin-top: 22px;
+}
+
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 12px;
+}
+
+.data-table th {
+  padding: 14px 16px;
+  background: #f7f8fc;
+  color: #68758a;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.data-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #edf0f5;
+  color: #344054;
+  white-space: nowrap;
+}
+
+.data-table tbody tr:hover {
+  background: #f8f9ff;
+}
+
+@media (max-width: 600px) {
+  .chart-container {
+    height: 280px;
+  }
+}
