@@ -1,13 +1,13 @@
 # Wind Forecast Accuracy Dashboard
 
-A full-stack web application for evaluating wind power forecast accuracy by comparing forecast data with actual wind generation data from the Elexon BMRS API for January 2026.
+A full-stack web application that evaluates wind power forecast accuracy by comparing forecast data with actual wind generation data from the Elexon BMRS API for January 2026.
 
 ## Features
 
 - Select a delivery date for analysis.
 - Compare forecast wind generation against actual generation.
 - Calculate Mean Absolute Error (MAE), Root Mean Square Error (RMSE), and forecast bias.
-- Visualize forecast and actual generation through an interactive line chart.
+- Visualize forecast and actual generation using an interactive line chart.
 - View hourly forecast values, actual generation, and forecast errors.
 - Display retrieved records and comparable intervals.
 
@@ -45,16 +45,16 @@ wind-power-dashboard/
 
 ## Prerequisites
 
-- Python 3.12 or compatible version
+- Python 3.12 or a compatible version
 - Node.js and npm
-- Docker Desktop (for running with Docker)
+- Docker Desktop for containerized execution
 - Git
 
 ## Running Locally
 
 ### 1. Start the Backend
 
-Open a terminal and run:
+Open a terminal at the project root and run:
 
 ```powershell
 cd backend
@@ -70,7 +70,7 @@ API documentation is available at `http://localhost:8000/docs`.
 
 ### 2. Start the Frontend
 
-Open a second terminal and run:
+Open a second terminal at the project root and run:
 
 ```powershell
 cd frontend
@@ -108,7 +108,7 @@ Actual half-hourly readings are aggregated into hourly values and compared with 
 - **Root Mean Square Error (RMSE):** The square root of the average squared forecast error.
 - **Forecast Bias:** The average signed error, calculated as forecast minus actual generation. A positive bias indicates overforecasting, while a negative bias indicates underforecasting.
 
-All generation and error values are expressed in megawatts (MW).
+Generation and error values are expressed in megawatts (MW).
 
 ### Forecast Publication Cutoff
 
@@ -136,10 +136,10 @@ AI assistance was used during development for coding guidance, debugging, unders
 
 ## Deployment Links
 
-- **Live Application:** Add the deployed frontend URL here.
-- **Backend API:** Add the deployed backend URL here.
-- **GitHub Repository:** Add the public repository URL here.
-- **Demo Video:** Add the unlisted YouTube video URL here.
+- **Live Application:** To be added after deployment.
+- **Backend API:** To be added after deployment.
+- **GitHub Repository:** https://github.com/Shrutiranmale/wind-analysis-7kq29
+- **Demo Video:** To be added after recording and uploading the unlisted YouTube video.
 
 ## Future Improvements
 
