@@ -1,4 +1,4 @@
-
+from fastapi.middleware.cors import CORSMiddleware
 from datetime import date, datetime, time, timedelta, timezone
 from math import sqrt
 
@@ -10,11 +10,13 @@ BASE_URL = "https://data.elexon.co.uk/bmrs/api/v1/datasets"
 UTC = timezone.utc
 
 app = FastAPI(title="Wind Forecast Accuracy Dashboard")
-
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Restrict this when deploying
-    allow_methods=["*"],
+    allow_origins=[
+        "https://wind-analysis-dashboard.vercel.app",
+    ],
+    allow_credentials=False,
+    allow_methods=["GET"],
     allow_headers=["*"],
 )
 

@@ -45,7 +45,7 @@ function App() {
     setError('');
 
     try {
-      const response = await fetch(`/api/analysis?delivery_date=${selectedDate}`)
+      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL ?? ''}/api/analysis?delivery_date=${selectedDate}`)
 
       if (!response.ok) {
         throw new Error(`API returned status ${response.status}`);
